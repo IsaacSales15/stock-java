@@ -1,5 +1,5 @@
 package com.sales.demo.controller;
 
-public class index {
+public class UserController {
     
 }
