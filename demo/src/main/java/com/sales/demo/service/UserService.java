@@ -30,4 +30,12 @@ public class UserService {
         Optional<User> user = userRepository.findById(id);
         return user.orElseThrow(() -> new RuntimeException("User not found with id: " + id));
     }
+
+    public void deletUser(Long id) {
+        Optional<User> user = userRepository.findById(id);
+
+        User existingUser = user.orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+
+        userRepository.deleteById(existingUser.getId());
+    }
 }
