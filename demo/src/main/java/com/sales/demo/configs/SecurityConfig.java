@@ -14,6 +14,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    //Desativei o csrf TEMPORARIAMENTE a fim de testes, não ficará assim ao final do projeto
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
