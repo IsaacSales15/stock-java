@@ -1,6 +1,6 @@
 package com.sales.demo.model;
 
-import javax.xml.crypto.Data;
+import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -9,8 +9,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "category")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +23,10 @@ public class Category {
     private int quantity;
 
     @CreationTimestamp
-    private Data createAt;
+    private LocalDateTime createAt;
 
     @UpdateTimestamp
-    private Data updateAt;
+    private LocalDateTime updateAt;
 
     public Long getId() {
         return id;
@@ -58,19 +60,19 @@ public class Category {
         this.quantity = quantity;
     }
 
-    public Data getCreateAt() {
+    public LocalDateTime getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(Data createAt) {
+    public void setCreateAt(LocalDateTime createAt) {
         this.createAt = createAt;
     }
 
-    public Data getUpdateAt() {
+    public LocalDateTime getUpdateAt() {
         return updateAt;
     }
 
-    public void setUpdateAt(Data updateAt) {
+    public void setUpdateAt(LocalDateTime updateAt) {
         this.updateAt = updateAt;
     }
 
