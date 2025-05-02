@@ -41,12 +41,12 @@ class UserController {
     @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public List<User> getAll() {
-        return userService.findAllUsers();
+        return userService.allUsers();
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void deletUser(@PathVariable Long id){
-        userService.deletUser(id);
+        userService.delete(id);
     }
 }

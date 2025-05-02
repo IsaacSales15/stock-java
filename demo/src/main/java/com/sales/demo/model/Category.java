@@ -20,8 +20,6 @@ public class Category {
 
     private String name, description;
 
-    private int quantity;
-
     @CreationTimestamp
     private LocalDateTime createAt;
 
@@ -50,14 +48,6 @@ public class Category {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public LocalDateTime getCreateAt() {
